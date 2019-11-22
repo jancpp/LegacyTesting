@@ -20,9 +20,6 @@ namespace SproutMethod
             {
                 Console.WriteLine($"{item.Key} , {item.Value}");
             }
-
-            Console.WriteLine("Press a key to continue ...");
-            Console.ReadKey();
         }
     }
 }
