@@ -14,7 +14,15 @@ namespace SproutClass
 
             // Sample data:
             result.Add(new Employee {FirstName="John", LastName="Doe", UniqueId=1 });
-            
+
+            var salaryDataService = new EmployeeSalaryService();
+            var salaries = salaryDataService.GetEmployeesData(); // now we can write a test for this method
+
+            result.ForEach(x => {
+                var salaryData = salaries.First(y => y.UniqueId == x.UniqueId);
+                x.Salary = salaryData.Salary;
+            });
+
             return result;
         }
     }

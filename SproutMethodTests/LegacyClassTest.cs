@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SproutMethod;
 using Xunit;
 
-namespace SproutMethodTests
+namespace SproutMethod.Tests
 {
     public class LegacyClassTest
     {
